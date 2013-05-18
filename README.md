@@ -24,7 +24,7 @@ message.
 How it works
 ------------
 
-A milter (short for *m*ailf*ilter*) is a sort of plugin for MTA's like postfix or sendmail.
+A milter (short for MailfILTER) is a sort of plugin for MTA's like postfix or sendmail.
 Because it is invoked even while the message is being received, a milter can do some
 interesting stuff at early stages in receiving mail. Typically milters are used for
 signing mail, greylisting, traffic shaping and so on.
