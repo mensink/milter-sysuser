@@ -4,15 +4,32 @@
 # is sending an e-mail through SMTP, and adds a mail header containing
 # that information.
 #
-# By default, postfix and sendmail add information about the local user
-# that's sending mails when the mail is sent locally (through the sendmail
-# program), but when the mail is delivered through SMTP, no such information
-# is available.
-# This script uses the information about the SMTP TCP-connection, and figures
-# out who's on the other end of that connection, using the lsof command.
+# Author: Stefan Mensink
+# Copyright: Basemotive VOF / Stefan Mensink
+# License: MIT
 #
-# Additionally, it is possible to block local users from sending mail
-# through local SMTP by hard-coding them into this script.
+# Copyright (c) 2013 Basemotive VOF / Stefan Mensink
+# 
+# Permission is hereby granted, free of charge, to any person
+# obtaining a copy of this software and associated documentation
+# files (the "Software"), to deal in the Software without
+# restriction, including without limitation the rights to use,
+# copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following
+# conditions:
+# 
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+# 
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+# OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+# HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+# WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+# OTHER DEALINGS IN THE SOFTWARE.
 
 # Settings
 socketname = '/var/spool/postfix/private/milter.sock'
